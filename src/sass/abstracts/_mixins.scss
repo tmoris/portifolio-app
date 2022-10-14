@@ -2,7 +2,7 @@
 // This file contains all application-wide Sass mixins.
 // -----------------------------------------------------------------------------
 
-@mixin attention() {
+@mixin on-event {
   &:hover,
   &:active,
   &:focus {

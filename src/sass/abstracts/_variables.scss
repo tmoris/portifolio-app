@@ -69,3 +69,42 @@ $breakpoints: (
 /// @example scss - When using a CDN
 ///   $base-url: 'https://cdn.example.com/assets/';
 $base-url: '/assets/' !default;
+// variables 
+// colors
+$primary: hsl(221, 85%, 56%) !default;
+$secondary: hsl(210, 37%, 15%)  !default;
+$error: #d32752 !default;
+$info: #f6c31c !default;
+$success: #1ac888 !default;
+$dark-blue: hsl(210, 37%, 15%);
+$white: hsl(0, 0%, 100%);
+$black: #2222;
+$accent: hsl(197, 87%, 56%);
+
+$colors: (
+  'primary': #326dee,
+  'secondary':  hsl(210, 37%, 15%), 
+  'accent': hsl(197, 87%, 56%),
+  
+ );
+  
+
+// font size
+$font-s: 0.875rem;
+$base-font-size: 1rem !default;
+$font-m: $base-font-size*0.75;
+$font-l: $base-font-size*1.5;
+$font-xl: $base-font-size*2;
+$font-xxl: $base-font-size*3;
+
+// spacings
+$base-padding: 0.75rem !default;
+$base-margin: 0.75rem !default;
+$gutter: $base-padding*1.67;
+$inline-spacing: $base-padding*1.34;
+// borders
+$base-border-sm: 0.0625rem;
+$base-border-radius: 0.5rem;
+// box-shadows
+$box-shadow-sm:  0 1px 2px 0 rgb(0 0 0 / 0.05);
+$base-box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
