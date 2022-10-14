@@ -1,3 +1,4 @@
+@use "../abstracts/variables" as var;
 // -----------------------------------------------------------------------------
 // This file contains all application-wide Sass mixins.
 // -----------------------------------------------------------------------------
@@ -10,3 +11,37 @@
   }
 }
 
+@mixin xs-screen {
+  @media (min-width: map-get(var.$breakpoints, 'xs')) {
+    @content;
+  }
+}
+@mixin s-screen {
+  
+  @media (min-width: map-get(var.$breakpoints, 'sm')) {
+    @content;
+  }
+}
+
+@mixin m-screen {
+  @media (min-width: map-get(var.$breakpoints, 'md')) {
+    @content;
+  }
+}
+
+@mixin l-screen {
+  @media (min-width: map-ger(var.$breakpoint, 'lg')) {
+    @content;
+  }
+}
+@mixin xl-screen {
+  @media (min-width: map-ger(var.$breakpoint, 'xl')) {
+    @content;
+  }
+}
+
+@mixin  light-theme {
+  @media screen and (prefers-color-scheme: light) {
+ @content;
+   }
+}
