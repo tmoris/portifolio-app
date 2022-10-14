@@ -1,0 +1,258 @@
+// utilty classes for padding, margin, generator
+@use "sass:math" as math;
+@use "../abstracts/variables" as var;
+
+// utilties map
+$utilties: (
+  "padding": (
+    "prefix": "p",
+    "value": (
+      "0": 0,
+      "1": var.$base-padding,
+      "2": var.$base-padding*2,
+      "3": var.$base-padding*4,
+      "4": var.$base-padding*6,
+      "5": var.$base-padding*8
+    ),
+  ),
+  "padding-inline": (
+    "prefix": "pi",
+    "value": (
+      "0": 0,
+      "1": var.$base-padding,
+      "2": var.$base-padding*2,
+      "3": var.$base-padding*4,
+      "4": var.$base-padding*6,
+      "5": var.$base-padding*8
+    ),
+  ),
+  "padding-inline-start": (
+    "prefix": "pis",
+    "values": (
+      "0": 0,
+      "1": var.$base-padding,
+      "2": var.$base-padding*2,
+      "3": var.$base-padding*4,
+      "4": var.$base-padding*6,
+      "5": var.$base-padding*8
+    ),
+  ),
+  "padding-inline-end": (
+    "prefix": "pie",
+    "values": (
+      "0": 0,
+      "1": var.$base-padding,
+      "2": var.$base-padding*2,
+      "3": var.$base-padding*4,
+      "4": var.$base-padding*6,
+      "5": var.$base-padding*8
+    ),
+  ),
+  "padding-block-start": (
+    "prefix": "pbs",
+    "values": (
+      "0": 0,
+      "1": var.$base-padding,
+      "2": var.$base-padding*2,
+      "3": var.$base-padding*4,
+      "4": var.$base-padding*6,
+      "5": var.$base-padding*8
+    ),
+  ),
+  "padding-block-end": (
+    "prefix": "pbe",
+    "values": (
+      "0": 0,
+      "1": var.$base-padding,
+      "2": var.$base-padding*2,
+      "3": var.$base-padding*4,
+      "4": var.$base-padding*6,
+      "5": var.$base-padding*8
+    ),
+  ),
+  "margin": (
+    "prefix": "m",
+    "values": (
+      "0": 0,
+      "1": var.$base-margin,
+      "2": var.$base-margin*2,
+      "3": var.$base-margin*4,
+      "4": var.$base-margin*6,
+      "5": var.$base-margin*8
+    ),
+  ),
+  "margin-block": (
+    "prefix": "mb",
+    "values": (
+      "0": 0,
+      "1": var.$base-margin,
+      "2": var.$base-margin*2,
+      "3": var.$base-margin*4,
+      "4": var.$base-margin*6,
+      "5": var.$base-margin*8
+    ),
+  ),
+  "margin-inline": (
+    "prefix": "mi",
+    "values": (
+      "0": 0,
+      "1": var.$base-margin,
+      "2": var.$base-margin*2,
+      "3": var.$base-margin*4,
+      "4": var.$base-margin*6,
+      "5": var.$base-margin*8
+    ),
+  ),
+  "margin-inline-start": (
+    "prefix": "mis",
+    "values": (
+      "0": 0,
+      "1": var.$base-margin,
+      "2": var.$base-margin*2,
+      "3": var.$base-margin*4,
+      "4": var.$base-margin*6,
+      "5": var.$base-margin*8
+    ),
+  ),
+  "margin-inline-end": (
+    "prefix": "mie",
+    "values": (
+      "0": 0,
+      "1": var.$base-margin,
+      "2": var.$base-margin*2,
+      "3": var.$base-margin*4,
+      "4": var.$base-margin*6,
+      "5": var.$base-margin*8
+    ),
+  ),
+
+  "margin-block-start": (
+    "prefix": "mbs",
+    "values": (
+      "0": 0,
+      "1": var.$base-margin,
+      "2": var.$base-margin*2,
+      "3": var.$base-margin*4,
+      "4": var.$base-margin*6,
+      "5": var.$base-margin*8
+    ),
+  ),
+
+  "margin-block-end": (
+    "prefix": "mbe",
+    "values": (
+      "0": 0,
+      "1": var.$base-margin,
+      "2": var.$base-margin*2,
+      "3": var.$base-margin*4,
+      "4": var.$base-margin*6,
+      "5": var.$base-margin*8
+    ),
+  ),
+
+  "opacity": (
+    "prefix": "o",
+    "values": (
+      "10": 0.1,
+      "20": 0.2,
+      "30": 0.3 ,
+      "40": 0.4,
+      "50": 0.5,
+      "60": 0.6,
+      "70": 0.7,
+      "80": 0.8,
+      "90": 0.9,
+      "100": 1
+    ),
+  ),
+
+  "border-radius": (
+    "prefix": "br",
+    "values": (
+      "default": var.$base-border-radius,
+      "none": 0,
+      "xs": math.div(var.$base-border-radius, 4),
+      "sm": math.div(var.$base-border-radius, 2),
+      "lg": var.$base-border-radius*2,
+      "full": 50%
+    ),
+  ),
+
+  "display": (
+    "prefix": "display",
+    "values": (
+      "n": none,
+      "b": block,
+      "f": flex,
+      "g": grid,
+      "i": inline,
+      "i-b": inline-block,
+      "i-f": inline-flex,
+      "i-g": inline-grid
+    ),
+  ),
+
+  "font-size": (
+    "prefix": "font",
+    "values": (
+      "s": var.$font-s,
+      "md": var.$base-font-size,
+      "l": var.$font-l,
+      "xl": var.$font-xl,
+      "xxl": var.$font-xxl,
+
+    ),
+  ),
+ " font-weight":(
+  "prefix": "font-wgt",
+  "values": (
+    "0": 0,
+    "1": 100,
+    "2": 200,
+    "3": 300,
+    "4": 400,
+    "5": 500,
+    "6": 600,
+    "7": 700,
+    "8": 800,
+    "9": 900,
+  ),
+ ),
+
+  "text-transform": (
+    "prefix": "text",
+    "values": (
+      "nom": none,
+      'low': lowercase,
+      "upp": uppercase,
+      "cap": capitalize,
+    ) ,
+  ),
+  " text-align": (
+    "prefix": "text-aln",
+    "values": (
+      "c": center,
+      "e": end,
+      "s": start,
+    ),
+   ),
+
+);
+// generating utilty classes
+
+@each $property, $map in $utilties {
+  $prefix: map-get($map, "prefix");
+  $values: map-get($map, "values" );
+
+  @each $key, $val in $values {
+    @if($key == "default") {
+      .#{$prefix}{
+#{$property}:$val;
+      }
+    }@else {
+.#{$prefix}-#{$key} {
+  #{$property}:$val;
+}
+    }
+  }
+}
