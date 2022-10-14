@@ -76,10 +76,8 @@ table {
 a {
    color: var.$brand-color;
   text-decoration: none;
-
  @include mixin.on-event {
  color: var.$text-color;
-    text-decoration: underline;
   }
 }
 

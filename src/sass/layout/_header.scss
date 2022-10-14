@@ -9,13 +9,8 @@
 @use "../abstracts/mixins" as mixin;
 .header {
 inline-size: 100%;
-background-color: transparent;
-position: fixed;
-top: 0;
-left: 0;
-right: 0;
-z-index: 1000;
-
+block-size: 100vh;
+background-color: var.$secondary;
 &-logolink {
 text-decoration: none;
 max-inline-size: 6.25rem;
