@@ -1,0 +1,103 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mixin;
+.main {
+  block-size: auto;
+  inline-size: 100%;
+  overflow: hidden;
+  margin-block-end: 2rem;
+  background-color: #f5f5f5;
+}
+.about {
+padding: var.$base-padding*2;
+&-wrapper {
+ background-color: var.$white;
+box-shadow: var.$base-box-shadow;
+border-radius: var.$base-border-radius;
+}
+&__title {
+  text-align: center;
+  text-transform: capitalize;
+  margin-block-end: 1rem;
+  }
+  &-img {
+    border-radius: var.$base-border-radius;
+    max-inline-size: 12.5em;
+    background-color: var.$accent;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+
+   
+  }
+  &-figure {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 2em;
+      left: 2em;
+      inline-size: 12em;
+      block-size: 100%;
+      box-shadow: var.$base-box-shadow;
+border: 0.0625em solid var.$accent;
+background-color: transparent;
+z-index: 1;
+border-radius: var.$base-border-radius;
+    }
+    &::after {
+      content: "";
+      background-color: transparentize($color: var.$accent, $amount: 0.5);
+      border-radius: var.$base-border-radius;
+      z-index: 2;
+      width: 12.5em;
+      height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    visibility: visible;
+    }
+    &__captn {
+position: absolute;
+bottom: 0.25em;
+font-size: var.$font-l;
+text-transform: capitalize;
+font-weight: 600;
+color: transparentize($color: var.$white, $amount: 0.5);
+z-index: 1000;
+
+    }
+    &:hover &__captn {
+      @include mixin.on-event {
+        color: var.$white;
+         }
+    }
+     &:hover::before {
+      visibility: visible;
+      transform: scale(0.95);
+      transition: transform, 150ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    } 
+     &:hover::after {
+      visibility: hidden;
+    } 
+  }
+  & p {
+    max-inline-size: 66ch;
+  }
+}
+
+.work-img {
+  display: block;
+  overflow: hidden;
+}
+
+.work-img img {
+  transition: all 1s;
+}
+
+.work-content {
+  padding: var.$base-padding*2;
+}
+.git-links {
+width: auto;
+}

@@ -30,12 +30,12 @@
 }
 
 @mixin l-screen {
-  @media (min-width: map-ger(var.$breakpoint, 'lg')) {
+  @media (min-width: map-get(var.$breakpoints, 'lg')) {
     @content;
   }
 }
 @mixin xl-screen {
-  @media (min-width: map-ger(var.$breakpoint, 'xl')) {
+  @media (min-width: map-get(var.$breakpoints, 'xl')) {
     @content;
   }
 }

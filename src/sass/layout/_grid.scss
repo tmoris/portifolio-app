@@ -1,0 +1,99 @@
+@use "sass:math" as math;
+@use "../abstracts/mixins" as mixin;
+
+
+// base layout classes
+.container {
+  width: 100%;
+  max-inline-size: 75em;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+
+// base layout classes generator
+$grid-columns: 12;
+
+@include mixin.xs-screen {
+  @for $i from 1 through $grid-columns {
+    .col-#{$i}-xs {
+      box-sizing: border-box;
+      flex-grow: 0;
+      inline-size: math.div($i * 100%, $grid-columns);
+    }
+  }
+}
+
+@include mixin.s-screen {
+@for $i from 2 through $grid-columns {
+  .col-#{$i}-sm {
+    box-sizing: border-box;
+    flex-grow: 0;
+    inline-size: math.div($i * 100%, $grid-columns);
+  }
+}
+}
+@include mixin.m-screen {
+  @for $i from 1 through $grid-columns {
+    .col-#{$i}-l {
+      box-sizing: border-box;
+    flex-grow: 0;
+    inline-size: math.div($i * 100%, $grid-columns);
+    }
+  }
+}
+
+@include mixin.l-screen {
+  @for $i from 1 through $grid-columns {
+    .col-#{$i}-l {
+      box-sizing: border-box;
+    flex-grow: 0;
+    inline-size: math.div($i * 100%, $grid-columns);
+    }
+  }
+}
+
+@include mixin.xl-screen {
+  @for $i from 1 through $grid-columns {
+.col-#{$i}-xl {
+  box-sizing: border-box;
+  flex-grow: 0;
+  inline-size: math.div($i * 100%, $grid-columns);
+}
+  }
+}
+
+// map grid gap utility class generator
+$grid-gaps: (
+"0": 0,
+"1": "10px",
+"2": "20px",
+"3": "30px"
+);
+
+@each $key, $val in $grid-gaps {
+  .gap-#{$key} > *{
+padding: $val;
+  }
+  .gap-#{$key} {
+    margin-inline: -$val;
+  }
+}
+
+// justifying items 
+
+// using sass lists 
+$layout-value: flex-start, flex-end, center, space-between,
+space-around, space-evenly;
+// justify-content classes 
+@each $val in $layout-value {
+  .justify-#{$val} {
+justify-content: $val ;
+  }
+}
