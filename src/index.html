@@ -241,100 +241,76 @@
     <section id="contact" class="work bg-image" style="background-image: url(assets/imgs/overlay-bg.jpg)">
       <div class="overlay-mf"></div>
       <div class="container">
-        <div class="row">
-          <div class="col">
-            <div class="contact-mf">
-              <div class="box-shadow-full">
-                <div class="row">
-                  <h2 class="subtitle"> what do think ?</h2>
-                  <div class="col">
-                    <div class="title-wrapper">
-                      <h3 class="title-left">
-                        Message Me
-                      </h3>
-                    </div>
-                    <div>
-                      <form action="forms/contact.php" method="post" class="form">
-                        <div class="row">
-                          <div class="col">
-                            <div class="form-group">
-                              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name"
-                                required>
-                              <label for="name"></label>
-                            </div>
-                          </div>
-                          <div class="col">
-                            <div class="form-group">
-                              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email"
-                                required>
-                              <label for="email"></label>
-                            </div>
-                          </div>
-                          <div class="col">
-                            <div class="form-group">
-                              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject"
-                                required>
-                              <label for="subject"></label>
-                            </div>
-                          </div>
-                          <div class="col">
-                            <div class="form-group">
-                              <textarea class="form-control" name="message" rows="5" placeholder="Message"
-                                required></textarea>
-                            </div>
-                          </div>
-                          <div class="col">
-                            <div class="loading">Loading</div>
-                            <div class="error-message"></div>
-                            <div class="sent-message">Your message has been sent. Thank you!</div>
-                          </div>
-                          <div class="col">
-                            <button type="submit" class="button">Send Message</button>
-                          </div>
-                        </div>
-                      </form>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="title-wrapper">
-                      <h3 class="title-left">
-                        Get in Touch
-                      </h3>
-                    </div>
-                    <div class="more-info">
-                      <p class="lead">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolorum dolorem soluta quidem
-                        expedita aperiam aliquid at.
-                        Totam magni ipsum suscipit amet? Autem nemo esse laboriosam ratione nobis
-                        mollitia inventore?
-                      </p>
-                      <ul class="list-ico">
-                        <li><img src="./assets/imgs/map-marker.svg" alt=""> Dubai, UAE</li>
-                        <li><img src="./assets/imgs/cellphone-basic.svg" alt=""> (971) 502-979-852</li>
-                        <li><img src="./assets/imgs/email-outline.svg" alt=""> tibenkanamoris@gmail.com</li>
-                      </ul>
-                    </div>
-                    <div class="social-media-links">
-                      <ul>
-            
-                        <li> <a href="#" aria-label="twitter"><span class="sr-only">twitter</span><img
-                              src="./assets/imgs/icon-twitter.svg" alt="twitter icon"></a></li>
-                        <li><a href="#" aria-label="linkedin"><span class="sr-only">linkedin</span><img
-                              src="./assets/imgs/linkedin.svg" alt="linkedin icon"></a></li>
-                        <li><a href="#" aria-label="github"><span class="sr-only">github</span> <img
-                              src="./assets/imgs/github.svg" alt="github icon"></a></li>
-                      </ul>
-                    </div>
-                  </div>
+        <h2 class="subtitle text-center pb-4"> what do think ?</h2>
+        <div class="contact-wrapper container">
+          
+          <section class="messageMe">
+            <h3 class="title-left">
+              Message Me
+            </h3>
+            <div>
+              <form action="contact.php" method="post" class="form" name="contact-form">
+                <div class="form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name"
+                    required>
+                  <label for="name"></label>
                 </div>
-              </div>
+                <div class="form-group">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email"
+                    required>
+                  <label for="email"></label>
+                </div>
+
+                <div class="form-group">
+                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject"
+                    required>
+                  <label for="subject"></label>
+                </div>
+                <div class="form-group">
+                  <textarea class="form-control" name="message" rows="5" placeholder="Message"
+                    required></textarea>
+                </div>
+
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                <div class="col-md-12 mb-3">
+                  <button type="submit" class="button">Send Message</button>
+                </div>
+              </form>
             </div>
-          </div>
+          </section>
+          <section class="getIntouch">
+            <h3 class="title">
+              Get in Touch
+            </h3>
+            <p class="cta-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolorum dolorem soluta quidem
+              expedita aperiam aliquid at.
+              Totam magni ipsum suscipit amet? Autem nemo esse laboriosam ratione nobis
+              mollitia inventore?</p>
+            <div class="contact-details">
+              <ul class="contact-list ">
+                <li><img src="./assets/imgs/map-marker.svg" alt=""> Dubai, UAE</li>
+                <li><img src="./assets/imgs/cellphone-basic.svg" alt=""> (971) 502-979-852</li>
+                <li><img src="./assets/imgs/email-outline.svg" alt=""> tibenkanamoris@gmail.com</li>
+              </ul>
+            </div>
+            <div class="social-media-links">
+              <ul class="display-f">
+                <li> <a href="#" aria-label="twitter"><span class="sr-only">twitter</span><img
+                      src="./assets/imgs/icon-twitter.svg" alt="twitter icon"></a></li>
+                <li><a href="#" aria-label="linkedin"><span class="sr-only">linkedin</span><img
+                      src="./assets/imgs/linkedin.svg" alt="linkedin icon"></a></li>
+                <li><a href="#" aria-label="github"><span class="sr-only">github</span> <img
+                      src="./assets/imgs/github.svg" alt="github icon"></a></li>
+              </ul>
+          </section>
         </div>
       </div>
     </section><!-- End Contact Section -->
-
-
+  
 
 
   </main>
