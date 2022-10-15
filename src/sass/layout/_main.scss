@@ -26,7 +26,6 @@ border-radius: var.$base-border-radius;
     position: relative;
     z-index: 1;
     overflow: hidden;
-
    
   }
   &-figure {
@@ -64,8 +63,7 @@ font-size: var.$font-l;
 text-transform: capitalize;
 font-weight: 600;
 color: transparentize($color: var.$white, $amount: 0.5);
-z-index: 1000;
-
+z-index: 999;
     }
     &:hover &__captn {
       @include mixin.on-event {
@@ -84,19 +82,6 @@ z-index: 1000;
   & p {
     max-inline-size: 66ch;
   }
-}
-
-.work-img {
-  display: block;
-  overflow: hidden;
-}
-
-.work-img img {
-  transition: all 1s;
-}
-
-.work-content {
-  padding: var.$base-padding*2;
 }
 .git-links {
 width: auto;
