@@ -91,6 +91,7 @@ width: auto;
 .contact-section {
   background-color: var.$accent;
  padding-block-end: var.$base-padding*3;
+ position: relative;
 }
 .contact-wrapper {
   display: flex;
@@ -99,6 +100,8 @@ width: auto;
   background-color: var.$white;
   color: inherit;
   padding: 1em;
+  position: relative;
+  z-index: 2;
   @include mixin.l-screen {
     flex-direction: row;
   }
@@ -106,4 +109,15 @@ width: auto;
   &>* {
     flex-basis: 100%;
   }
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.7;
+  background-color: var.$accent;
+  z-index: 1;
 }
