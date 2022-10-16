@@ -10,7 +10,13 @@
       @content;
   }
 }
-
+@mixin links-animator {
+  @for $i from 1 through 4 {
+    .navlist-item:nth-child(#{$i}){
+      transition-delay: ($i * 0.1s) + 0.15s;
+    }
+  }
+}
 @mixin xs-screen {
   @media (min-width: map-get(var.$breakpoints, 'xs')) {
     @content;

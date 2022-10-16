@@ -115,6 +115,7 @@ transform: translateX(0);
     &-item {
       white-space: nowrap;
       list-style: none;
+      @include mixin.links-animator;
       &__link {
         font-size: 1rem;
         text-transform: capitalize;
