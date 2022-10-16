@@ -46,6 +46,36 @@
   }
 }
 
+// max width media-queries
+@mixin xs-screen-down {
+  @media (max-width: map-get(var.$breakpoints, 'xs')) {
+    @content;
+  }
+}
+@mixin s-screen-down {
+  
+  @media (max-width: map-get(var.$breakpoints, 'sm')) {
+    @content;
+  }
+}
+
+@mixin m-screen-down {
+  @media (max-width: map-get(var.$breakpoints, 'md')) {
+    @content;
+  }
+}
+
+@mixin l-screen-down {
+  @media (max-width: map-get(var.$breakpoints, 'lg')) {
+    @content;
+  }
+}
+@mixin xl-screen-down {
+  @media (max-width: map-get(var.$breakpoints, 'xl')) {
+    @content;
+  }
+}
+
 @mixin  light-theme {
   @media screen and (prefers-color-scheme: light) {
  @content;

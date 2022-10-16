@@ -3,21 +3,27 @@
 .main {
   block-size: auto;
   inline-size: 100%;
-  overflow: hidden;
- 
+  overflow: hidden; 
   background-color: var.$light-grey;
 }
 .about {
 padding: var.$base-padding*2;
+margin-block-end: var.$inline-spacing ;
+
 &-wrapper {
  background-color: var.$white;
 box-shadow: var.$base-box-shadow;
 border-radius: var.$base-border-radius;
+display: flex;
+flex-direction: column;
+padding-block: var.$inline-spacing*2;
+
 }
 &__title {
   text-align: center;
   text-transform: capitalize;
-  margin-block-end: 1rem;
+  margin-block-end: 1.3rem;
+  font-size: var.$font-xxl;
   }
   &-img {
     border-radius: var.$base-border-radius;
@@ -74,6 +80,7 @@ z-index: 999;
       visibility: visible;
       transform: scale(0.95);
       transition: transform, 150ms cubic-bezier(0.165, 0.84, 0.44, 1);
+      background-color: transparentize($color: var.$accent, $amount: 0.5);
     } 
      &:hover::after {
       visibility: hidden;
