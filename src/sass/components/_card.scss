@@ -19,7 +19,6 @@
 
   &-title {
 font-size: var.$font-l;
-padding-block-end: var.$base-padding;
 font-weight: bold;
   }
   &-text {
@@ -39,5 +38,12 @@ font-weight: bold;
       &-img {
         display: block;
         overflow: hidden;
+      }
+      &-link {
+text-transform: capitalize;
+color: var.$accent;
+cursor: pointer;
+position: relative;
+z-index: 101;
       }
 }

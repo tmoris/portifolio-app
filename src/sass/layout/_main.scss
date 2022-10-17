@@ -99,7 +99,9 @@ padding-block: var.$gutter*2;
 }
 .git-links {
 display: flex;
-width: auto;
+width: 30%;
+gap: 5%;
+z-index: 191;
 }
 
 // contact section styles
@@ -142,4 +144,7 @@ width: auto;
   background-color: var.$accent;
   margin-block-end: var.$inline-spacing;
   margin-inline: auto;
+}
+svg[fill="white"] {
+  color: red;
 }
