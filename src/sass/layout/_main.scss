@@ -80,7 +80,7 @@ z-index: 999;
       visibility: visible;
       transform: scale(0.95);
       transition: transform, 150ms cubic-bezier(0.165, 0.84, 0.44, 1);
-      background-color: transparentize($color: var.$accent, $amount: 0.5);
+       background-color: transparentize($color: var.$accent, $amount: 0.5);
     } 
      &:hover::after {
       visibility: hidden;
