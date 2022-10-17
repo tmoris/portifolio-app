@@ -80,12 +80,15 @@ padding-block: var.$gutter;
     margin: 0 auto;
   }
   &__mail {
-        writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
     position: fixed;
     top: 40%;
     left: 2em;
-    color: transparentize($color: var.$white, $amount: 0.5);
+    color: var.$accent;
     font-size: 1.25rem;
+    &:hover {
+      opacity: 1;
+    }
   }
   &__media-links a:hover {
     opacity: 0.5;

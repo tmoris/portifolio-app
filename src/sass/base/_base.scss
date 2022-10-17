@@ -71,14 +71,10 @@ table {
 	border-spacing: 0;
 }
 /**
- * Basic styles for links
+ * Basic reset for links
  */
-a {
-   color: var.$brand-color;
+a, a:hover, a:active {
   text-decoration: none;
- @include mixin.on-event {
- color: var.$text-color;
-  }
 }
 
 /* A elements that don't have a class get default styles */
