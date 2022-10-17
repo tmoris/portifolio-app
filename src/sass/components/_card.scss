@@ -11,7 +11,7 @@
   margin: var.$base-margin;
   &::before {
     content: '';
-    background-color: transparentize($color: var.$accent, $amount: 0.5);
+    background-color: transparentize($color: var.$accent, $amount: 0.85);
     position: absolute;
     inset: 0;
     visibility: hidden;
@@ -19,7 +19,7 @@
 
   &-title {
 font-size: var.$font-l;
-font-weight: bold;
+text-transform: capitalize;
   }
   &-text {
     padding: var.$base-padding;
