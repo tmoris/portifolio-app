@@ -8,7 +8,7 @@
 }
 .about {
 padding: var.$base-padding*2;
-margin-block-end: var.$inline-spacing ;
+margin-block: var.$inline-spacing*2;
 
 &-wrapper {
  background-color: var.$white;
@@ -94,6 +94,7 @@ z-index: 999;
     max-inline-size: 66ch;
   }
 }
+//projects styles start
 .projects {
 padding-block: var.$gutter*2;
 }
@@ -141,6 +142,7 @@ z-index: 191;
 .line {
   inline-size: 10vw;
   block-size: 0.125em;
+  min-inline-size: 6vw;
   background-color: var.$accent;
   margin-block-end: var.$inline-spacing;
   margin-inline: auto;

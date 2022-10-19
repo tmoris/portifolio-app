@@ -2,7 +2,7 @@
 @use "sass:math" as math;
 .card {
   display: block;
-  background-color: inherit;
+  background-color: var.$white;
   color: inherit;
   border-radius: var.$base-border-radius;
   box-shadow: var.$base-box-shadow;
@@ -11,7 +11,7 @@
   margin: var.$base-margin;
   &::before {
     content: '';
-    background-color: transparentize($color: var.$accent, $amount: 0.85);
+    background-color: transparentize($color: var.$accent, $amount: 0.98);
     position: absolute;
     inset: 0;
     visibility: hidden;
