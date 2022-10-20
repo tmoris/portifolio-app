@@ -157,6 +157,18 @@ z-index: 191;
   margin-block-end: var.$inline-spacing;
   margin-inline: auto;
 }
-svg[fill="white"] {
-  color: red;
+.text-black  {
+display: flex;
+gap: 1em;
+color: inherit;
 }
+.contact-list {
+  gap: 5%;
+  flex-flow: row wrap;
+}
+.contact-list li {
+  @extend .text-black;
+  }
+  .contact-details {
+    margin-block-end: var.$gutter;
+  }
