@@ -8,9 +8,12 @@
   <title>Tibenkana-Moris</title>
 
   <!-- Favicons -->
-  <link href="assets/img/logo.svg" rel="icon">
+  <link href="./assets/imgs/logo.svg" rel="icon">
+  <!-- typed js cdn link -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+ 
   <!-- google fonts -->
-
   <!-- fontawesome icon link  -->
   <script src="https://kit.fontawesome.com/80210fbce6.js" crossorigin="anonymous"></script>
   <!-- Main styles(css) link -->
@@ -48,7 +51,7 @@
      </div>
     </div>
     <!-- Hero section start -->
-    <div id="hero" class="hero  bg-image" style="background-image: url(assets/imgs/hero-bg.jpg)">
+    <div id="hero" class="hero  bg-image" style="background-image: url(assets/imgs/overlay-bg.jpg)">
       <div class="hero-overlay display-table"></div>
       <div class="hero-content grid-centered">
         <div class="row">
@@ -77,7 +80,7 @@
 
   <!-- main start -->
   <main class="main">
-    <div class="about" id="about ">
+    <div class="about" id="about">
       <section class="container about-wrapper">
         <h2 class="about__title site-title">About Me</h2> 
         <div class="line"></div>
@@ -114,7 +117,7 @@
       </section>
     </div>
     <!-- about section end  -->
-    <section class="work">
+    <section id="work" class="work">
       <div class="container grid-centered">
         <h2 class="about__title ">my work</h2>
       <p class="font-l">A sample selection of my work </p>
@@ -185,7 +188,7 @@
 
         <div class="card project col-12-xs col-4-md col-3-lg">
           <div class="card-img">
-            <img src="./assets/imgs/profile.jpeg" alt="" class="card-img__img">
+            <img src="./assets/imgs/overlay-bg.jpg" alt="" class="card-img__img">
           </div>
           <section class="card-text">
             <div class="display-f justify-space-between">
@@ -205,7 +208,7 @@
 
         <div class="card project col-12-xs col-4-md col-3-lg">
           <div class="card-img">
-            <img src="./assets/imgs/profile.jpeg" alt="" class="card-img__img">
+            <img src="./assets/imgs/overlay-bg.jpg" alt="" class="card-img__img">
           </div>
           <section class="card-text">
             <div class="display-f justify-space-between">
@@ -225,7 +228,7 @@
 
         <div class="card project col-12-xs col-4-md col-3-lg">
           <div class="card-img">
-            <img src="./assets/imgs/profile.jpeg" alt="" class="card-img__img">
+            <img src="./assets/imgs/overlay-bg.jpg" alt="" class="card-img__img">
           </div>
           <section class="card-text">
             <div class="display-f justify-space-between">
@@ -282,7 +285,7 @@
               Message Me
             </h3>
             <div class="container">
-              <form action="contact.php" method="post" class="form" name="contact-form">
+              <form action="index.html" method="post" class="form" name="contact-form" id="contact-form">
                 <div class="form-group">
                   <label for="name" class="form-label">name</label>
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name"
@@ -314,7 +317,7 @@
                 <div class="success-message ">Your message has been sent. Thank you!</div>
 
                 <div class="col-md-12 mb-3">
-                  <button type="submit" class="form-button">Send Message</button>
+                  <button type="submit" class="form-button formSubmit">Send Message</button>
                 </div>
               </form>
             </div>
@@ -336,5 +339,6 @@
   </footer>
   <!-- footer end -->
   <script src="./assets/js/main.js"></script>
+  <script src="./assets/js/typed.js/typed.min.js"></script>
 </body>
 </html>

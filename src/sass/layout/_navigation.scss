@@ -14,14 +14,14 @@
 
 .navigation-wrapper {
   @extend %flex-layout;
-  background-color: var.$secondary;
+  // background-color: var.$secondary;
   box-sizing: border-box;
   position: fixed;
   z-index: 1000;
   .header-scrolled & {
     box-shadow: var.$base-box-shadow;
     padding-block: var.$base-padding;
-    background-color: var.$secondary;
+    background-color:#213548;
   }
   .container {
     @extend %flex-layout;
