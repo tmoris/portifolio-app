@@ -14,14 +14,14 @@ margin-block: var.$inline-spacing*2;
  background-color: var.$white;
 box-shadow: var.$base-box-shadow;
 border-radius: var.$base-border-radius;
-display: flex;
-flex-direction: column;
-justify-content:  center;
-align-items: center;
+display: grid;
+place-content: center;
 padding-block: var.$inline-spacing*2;
 padding-inline: var.$inline-spacing;
 
-
+& >* {
+  flex: 1;
+}
 }
 &__title {
   text-align: center;
@@ -31,6 +31,7 @@ padding-inline: var.$inline-spacing;
   }
   &-img {
     border-radius: var.$base-border-radius;
+    inline-size: 100%;
     max-inline-size: 12.5em;
     background-color: var.$accent;
     position: relative;
@@ -45,7 +46,7 @@ padding-inline: var.$inline-spacing;
       position: absolute;
       top: 2em;
       left: 2em;
-      inline-size: 12em;
+      inline-size: 100%;
       block-size: 100%;
       box-shadow: var.$base-box-shadow;
 border: 0.0625em solid var.$accent;
@@ -58,8 +59,8 @@ border-radius: var.$base-border-radius;
       background-color: transparentize($color: var.$accent, $amount: 0.5);
       border-radius: var.$base-border-radius;
       z-index: 2;
-      width: 12.5em;
-      height: 100%;
+      block-size: 100%;
+      inline-size: 100%;
     position: absolute;
     top: 0;
     right: 0;
@@ -74,6 +75,9 @@ text-transform: capitalize;
 font-weight: 600;
 color: transparentize($color: var.$white, $amount: 0.5);
 z-index: 999;
+@include mixin.s-screen-down {
+  font-size: var.$base-font-size;
+}
     }
     &:hover &__captn {
       @include mixin.on-event {
@@ -92,6 +96,14 @@ z-index: 999;
   }
   & p {
     max-inline-size: 66ch;
+    inline-size: 100%;
+  }
+  &__text {
+display: flex;
+flex-direction: column;
+justify-content: center;
+clear: both;
+
   }
 }
 //projects styles start
