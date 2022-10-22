@@ -8,3 +8,20 @@
   color: var.$white;
   text-align: center;
 }
+.back-to-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 1em;
+  bottom: 1em;
+  z-index: 996;
+  background: var.$accent;
+  inline-size: 2.5em;
+  block-size: 2.5em;
+  border-radius: 100vw;
+  transition: all 0.4s;
+}
+.back-to-top.active {
+  visibility: visible;
+  opacity: 1;
+}
