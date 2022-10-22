@@ -126,7 +126,7 @@ z-index: 191;
 .contact-title {
   color: var.$white;
   padding-block-start: var.$base-padding;
-  
+  text-shadow: 1px 1px 2px #000, -2px -2px 2px #000;
 }
 .contact-wrapper {
   display: flex;
