@@ -135,7 +135,7 @@ z-index: 191;
   gap: var.$gutter*2;
   background-color: var.$white;
   color: inherit;
-  padding: 1em;
+  padding: var.$gutter 1em;
   margin: var.$gutter*2;
   position: relative;
   z-index: 2;
