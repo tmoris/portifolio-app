@@ -147,15 +147,16 @@ z-index: 191;
   margin: var.$gutter*2;
   position: relative;
   z-index: 2;
+  @include mixin.dark-theme {
+    background-color: lighten(var.$secondary, 3%);
+    color: var.$white;
+  }
   @include mixin.l-screen {
     flex-direction: row;
     p {
       max-inline-size: 75ch;
     }
-    @include mixin.dark-theme {
-      background-color: lighten(var.$secondary, 3%);
-      color: var.$white;
-    }
+   
   }
 
   &>* {
