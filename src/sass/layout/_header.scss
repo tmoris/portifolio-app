@@ -19,7 +19,7 @@
     padding-block: var.$gutter;
 
     & .logo-img {
-      min-inline-size: 2rem;
+      min-inline-size: 2.5rem;
       inline-size: clamp(3rem, 4rem, 100%);
       position: relative;
       z-index: 1000;
