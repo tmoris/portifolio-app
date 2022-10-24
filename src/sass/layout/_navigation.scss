@@ -122,7 +122,7 @@
   flex: 1 auto;
   list-style: none;
 
-  &-item + &-item {
+  &-item+&-item {
     margin-block-start: 1em;
   }
 
@@ -194,7 +194,7 @@
   .navlist {
     flex-direction: row;
 
-    &-item + &-item {
+    &-item+&-item {
       margin-block-start: 0;
       margin-inline-start: 1em;
     }

@@ -9,10 +9,10 @@ $utilties: (
     "value": (
       "0": 0,
       "1": var.$base-padding,
-      "2": var.$base-padding*2,
-      "3": var.$base-padding*4,
-      "4": var.$base-padding*6,
-      "5": var.$base-padding*8
+      "2": var.$base-padding * 2,
+      "3": var.$base-padding * 4,
+      "4": var.$base-padding * 6,
+      "5": var.$base-padding * 8,
     ),
   ),
   "padding-inline": (
@@ -20,10 +20,10 @@ $utilties: (
     "value": (
       "0": 0,
       "1": var.$base-padding,
-      "2": var.$base-padding*2,
-      "3": var.$base-padding*4,
-      "4": var.$base-padding*6,
-      "5": var.$base-padding*8
+      "2": var.$base-padding * 2,
+      "3": var.$base-padding * 4,
+      "4": var.$base-padding * 6,
+      "5": var.$base-padding * 8,
     ),
   ),
   "padding-inline-start": (
@@ -31,10 +31,10 @@ $utilties: (
     "values": (
       "0": 0,
       "1": var.$base-padding,
-      "2": var.$base-padding*2,
-      "3": var.$base-padding*4,
-      "4": var.$base-padding*6,
-      "5": var.$base-padding*8
+      "2": var.$base-padding * 2,
+      "3": var.$base-padding * 4,
+      "4": var.$base-padding * 6,
+      "5": var.$base-padding * 8,
     ),
   ),
   "padding-inline-end": (
@@ -42,10 +42,10 @@ $utilties: (
     "values": (
       "0": 0,
       "1": var.$base-padding,
-      "2": var.$base-padding*2,
-      "3": var.$base-padding*4,
-      "4": var.$base-padding*6,
-      "5": var.$base-padding*8
+      "2": var.$base-padding * 2,
+      "3": var.$base-padding * 4,
+      "4": var.$base-padding * 6,
+      "5": var.$base-padding * 8,
     ),
   ),
   "padding-block-start": (
@@ -53,10 +53,10 @@ $utilties: (
     "values": (
       "0": 0,
       "1": var.$base-padding,
-      "2": var.$base-padding*2,
-      "3": var.$base-padding*4,
-      "4": var.$base-padding*6,
-      "5": var.$base-padding*8
+      "2": var.$base-padding * 2,
+      "3": var.$base-padding * 4,
+      "4": var.$base-padding * 6,
+      "5": var.$base-padding * 8,
     ),
   ),
   "padding-block-end": (
@@ -64,10 +64,10 @@ $utilties: (
     "values": (
       "0": 0,
       "1": var.$base-padding,
-      "2": var.$base-padding*2,
-      "3": var.$base-padding*4,
-      "4": var.$base-padding*6,
-      "5": var.$base-padding*8
+      "2": var.$base-padding * 2,
+      "3": var.$base-padding * 4,
+      "4": var.$base-padding * 6,
+      "5": var.$base-padding * 8,
     ),
   ),
   "margin": (
@@ -75,10 +75,10 @@ $utilties: (
     "values": (
       "0": 0,
       "1": var.$base-margin,
-      "2": var.$base-margin*2,
-      "3": var.$base-margin*4,
-      "4": var.$base-margin*6,
-      "5": var.$base-margin*8
+      "2": var.$base-margin * 2,
+      "3": var.$base-margin * 4,
+      "4": var.$base-margin * 6,
+      "5": var.$base-margin * 8,
     ),
   ),
   "margin-block": (
@@ -86,10 +86,10 @@ $utilties: (
     "values": (
       "0": 0,
       "1": var.$base-margin,
-      "2": var.$base-margin*2,
-      "3": var.$base-margin*4,
-      "4": var.$base-margin*6,
-      "5": var.$base-margin*8
+      "2": var.$base-margin * 2,
+      "3": var.$base-margin * 4,
+      "4": var.$base-margin * 6,
+      "5": var.$base-margin * 8,
     ),
   ),
   "margin-inline": (
@@ -97,10 +97,10 @@ $utilties: (
     "values": (
       "0": 0,
       "1": var.$base-margin,
-      "2": var.$base-margin*2,
-      "3": var.$base-margin*4,
-      "4": var.$base-margin*6,
-      "5": var.$base-margin*8
+      "2": var.$base-margin * 2,
+      "3": var.$base-margin * 4,
+      "4": var.$base-margin * 6,
+      "5": var.$base-margin * 8,
     ),
   ),
   "margin-inline-start": (
@@ -108,10 +108,10 @@ $utilties: (
     "values": (
       "0": 0,
       "1": var.$base-margin,
-      "2": var.$base-margin*2,
-      "3": var.$base-margin*4,
-      "4": var.$base-margin*6,
-      "5": var.$base-margin*8
+      "2": var.$base-margin * 2,
+      "3": var.$base-margin * 4,
+      "4": var.$base-margin * 6,
+      "5": var.$base-margin * 8,
     ),
   ),
   "margin-inline-end": (
@@ -119,53 +119,49 @@ $utilties: (
     "values": (
       "0": 0,
       "1": var.$base-margin,
-      "2": var.$base-margin*2,
-      "3": var.$base-margin*4,
-      "4": var.$base-margin*6,
-      "5": var.$base-margin*8
+      "2": var.$base-margin * 2,
+      "3": var.$base-margin * 4,
+      "4": var.$base-margin * 6,
+      "5": var.$base-margin * 8,
     ),
   ),
-
   "margin-block-start": (
     "prefix": "mbs",
     "values": (
       "0": 0,
       "1": var.$base-margin,
-      "2": var.$base-margin*2,
-      "3": var.$base-margin*4,
-      "4": var.$base-margin*6,
-      "5": var.$base-margin*8
+      "2": var.$base-margin * 2,
+      "3": var.$base-margin * 4,
+      "4": var.$base-margin * 6,
+      "5": var.$base-margin * 8,
     ),
   ),
-
   "margin-block-end": (
     "prefix": "mbe",
     "values": (
       "0": 0,
       "1": var.$base-margin,
-      "2": var.$base-margin*2,
-      "3": var.$base-margin*4,
-      "4": var.$base-margin*6,
-      "5": var.$base-margin*8
+      "2": var.$base-margin * 2,
+      "3": var.$base-margin * 4,
+      "4": var.$base-margin * 6,
+      "5": var.$base-margin * 8,
     ),
   ),
-
   "opacity": (
     "prefix": "o",
     "values": (
       "10": 0.1,
       "20": 0.2,
-      "30": 0.3 ,
+      "30": 0.3,
       "40": 0.4,
       "50": 0.5,
       "60": 0.6,
       "70": 0.7,
       "80": 0.8,
       "90": 0.9,
-      "100": 1
+      "100": 1,
     ),
   ),
-
   "border-radius": (
     "prefix": "br",
     "values": (
@@ -173,11 +169,10 @@ $utilties: (
       "none": 0,
       "xs": math.div(var.$base-border-radius, 4),
       "sm": math.div(var.$base-border-radius, 2),
-      "lg": var.$base-border-radius*2,
-      "full": 50%
+      "lg": var.$base-border-radius * 2,
+      "full": 50%,
     ),
   ),
-
   "display": (
     "prefix": "display",
     "values": (
@@ -188,10 +183,9 @@ $utilties: (
       "i": inline,
       "i-b": inline-block,
       "i-f": inline-flex,
-      "i-g": inline-grid
+      "i-g": inline-grid,
     ),
   ),
-
   "font-size": (
     "prefix": "font",
     "values": (
@@ -200,33 +194,31 @@ $utilties: (
       "l": var.$font-l,
       "xl": var.$font-xl,
       "xxl": var.$font-xxl,
-
     ),
   ),
- " font-weight":(
-  "prefix": "font-wgt",
-  "values": (
-    "0": 0,
-    "1": 100,
-    "2": 200,
-    "3": 300,
-    "4": 400,
-    "5": 500,
-    "6": 600,
-    "7": 700,
-    "8": 800,
-    "9": 900,
+  " font-weight": (
+    "prefix": "font-wgt",
+    "values": (
+      "0": 0,
+      "1": 100,
+      "2": 200,
+      "3": 300,
+      "4": 400,
+      "5": 500,
+      "6": 600,
+      "7": 700,
+      "8": 800,
+      "9": 900,
+    ),
   ),
- ),
-
   "text-transform": (
     "prefix": "text",
     "values": (
       "nom": none,
-      'low': lowercase,
+      "low": lowercase,
       "upp": uppercase,
       "cap": capitalize,
-    ) ,
+    ),
   ),
   " text-align": (
     "prefix": "text-aln",
@@ -235,24 +227,23 @@ $utilties: (
       "e": end,
       "s": start,
     ),
-   ),
-
+  ),
 );
 // generating utilty classes
 
 @each $property, $map in $utilties {
   $prefix: map-get($map, "prefix");
-  $values: map-get($map, "values" );
+  $values: map-get($map, "values");
 
   @each $key, $val in $values {
-    @if($key == "default") {
-      .#{$prefix}{
-#{$property}:$val;
+    @if ($key == "default") {
+      .#{$prefix} {
+        #{$property}: $val;
       }
-    }@else {
-.#{$prefix}-#{$key} {
-  #{$property}:$val;
-}
+    } @else {
+      .#{$prefix}-#{$key} {
+        #{$property}: $val;
+      }
     }
   }
 }

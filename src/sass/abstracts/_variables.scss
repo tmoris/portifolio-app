@@ -55,12 +55,15 @@ $max-width: 1180px !default;
 /// @prop {Map} values - Values are actual breakpoints expressed in pixels
 // media-Queries
 $breakpoints: (
-"xs": 0,
-"sm": 30em, //  480px
-"md": 45em , //  720px
-"lg": 61.25em, //  980px
-"xl": 75em //  1200px
-) !default;
+  "xs": 0,
+  "sm": 30em,
+  //  480px
+  "md": 45em,
+  //  720px
+  "lg": 61.25em,
+  //  980px
+  "xl": 75em //  1200px
+  ) !default;
 
 
 
@@ -75,22 +78,23 @@ $base-url: '/assets/' !default;
 // variables 
 // colors
 $primary: hsl(221, 85%, 56%) !default;
-$secondary: hsl(210, 37%, 15%)  !default;
+$secondary: hsl(210, 37%, 15%) !default;
 $error: #d32752 !default;
 $info: #f6c31c !default;
 $success: #1ac888 !default;
-$dark-blue: hsl(210, 37%, 15%);
+$dark-blue: hsl(210, 37%, 15%
+);
 $white: hsl(0, 0%, 100%);
 $black: #2222;
 $accent: hsl(197, 87%, 56%);
 
 $colors: (
   'primary': #326dee,
-  'secondary':  hsl(210, 37%, 15%), 
+  'secondary': hsl(210, 37%, 15%),
   'accent': hsl(197, 87%, 56%),
-  
- );
-  
+
+);
+
 
 // font size
 $font-s: 0.875rem;
@@ -110,4 +114,4 @@ $base-border-sm: 0.0625rem;
 $base-border-radius: 0.5rem;
 // box-shadows
 $box-shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-$base-box-shadow:  0 1px 2px 0 rgb(0 0 0 / 0.05);
+$base-box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);

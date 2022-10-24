@@ -22,14 +22,15 @@ html {
 *::after {
   box-sizing: inherit;
 }
+
 /* Remove default margin, paddings, border, font */
- * {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
 /* Set core root defaults */
@@ -37,43 +38,66 @@ html:focus-within {
   scroll-behavior: smooth;
 }
 
-html, body {
+html,
+body {
   min-block-size: 100%;
 }
+
 /* Set core body defaults */
 body {
-  
+
   text-rendering: optimizeSpeed;
   line-height: 1.5;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 
-ol, ul, ul[role='list'],
-ol[role='list']  {
-	list-style: none;
+ol,
+ul,
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
 }
+
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
+
 /**
  * Basic reset for links
  */
-a, a:hover, a:active {
+a,
+a:hover,
+a:active {
   text-decoration: none;
 }
 
@@ -84,7 +108,8 @@ a:not([class]) {
 
 /* Make images easier to work with */
 img,
-picture, svg {
+picture,
+svg {
   max-inline-size: 100%;
   display: block;
   block-size: auto;
@@ -93,9 +118,9 @@ picture, svg {
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
-   scroll-behavior: auto;
+    scroll-behavior: auto;
   }
-  
+
   *,
   *::before,
   *::after {

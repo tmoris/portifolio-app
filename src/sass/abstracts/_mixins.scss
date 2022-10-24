@@ -4,26 +4,30 @@
 // -----------------------------------------------------------------------------
 
 @mixin on-event {
+
   &:hover,
   &:active,
   &:focus {
-      @content;
+    @content;
   }
 }
+
 @mixin links-animator {
   @for $i from 1 through 4 {
-    .navlist-item:nth-child(#{$i}){
+    .navlist-item:nth-child(#{$i}) {
       transition-delay: ($i * 0.1s) + 0.15s;
     }
   }
 }
+
 @mixin xs-screen {
   @media (min-width: map-get(var.$breakpoints, 'xs')) {
     @content;
   }
 }
+
 @mixin s-screen {
-  
+
   @media (min-width: map-get(var.$breakpoints, 'sm')) {
     @content;
   }
@@ -40,6 +44,7 @@
     @content;
   }
 }
+
 @mixin xl-screen {
   @media (min-width: map-get(var.$breakpoints, 'xl')) {
     @content;
@@ -52,8 +57,9 @@
     @content;
   }
 }
+
 @mixin s-screen-down {
-  
+
   @media (max-width: map-get(var.$breakpoints, 'sm')) {
     @content;
   }
@@ -70,19 +76,21 @@
     @content;
   }
 }
+
 @mixin xl-screen-down {
   @media (max-width: map-get(var.$breakpoints, 'xl')) {
     @content;
   }
 }
 
-@mixin  light-theme {
+@mixin light-theme {
   @media screen and (prefers-color-scheme: light) {
- @content;
-   }
+    @content;
+  }
 }
-@mixin  dark-theme {
+
+@mixin dark-theme {
   @media screen and (prefers-color-scheme: dark) {
- @content;
-   }
+    @content;
+  }
 }

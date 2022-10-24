@@ -1,10 +1,13 @@
 @use "../abstracts/variables" as var;
 @use "../abstracts/mixins" as mixin;
+
 .form {
   inline-size: 100%;
+
   &__title {
     letter-spacing: 0.0635em;
   }
+
   &-group {
     margin-block-end: var.$base-margin*2;
     position: relative;
@@ -76,6 +79,7 @@
       transform: scale(1.1);
     }
   }
+
   & .error-message {
     display: none;
     color: var.$white;
@@ -93,14 +97,14 @@
     padding: 1em;
     font-weight: 600;
   }
-  
+
   & .loading {
     display: none;
     background: #fff;
     text-align: center;
     padding: 15px;
   }
-  
+
   & .loading:before {
     content: "";
     display: inline-block;
@@ -113,26 +117,26 @@
     -webkit-animation: animate-loading 1s linear infinite;
     animation: animate-loading 1s linear infinite;
   }
-  
-  
+
+
   @-webkit-keyframes animate-loading {
     0% {
       transform: rotate(0deg);
     }
-  
+
     100% {
       transform: rotate(360deg);
     }
   }
-  
+
   @keyframes animate-loading {
     0% {
       transform: rotate(0deg);
     }
-  
+
     100% {
       transform: rotate(360deg);
     }
   }
-  
+
 }

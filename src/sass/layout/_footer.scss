@@ -1,4 +1,5 @@
 @use "../abstracts/variables" as var;
+
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
@@ -8,6 +9,7 @@
   color: var.$white;
   text-align: center;
 }
+
 .back-to-top {
   position: fixed;
   visibility: hidden;
@@ -21,6 +23,7 @@
   border-radius: 100vw;
   transition: all 0.4s;
 }
+
 .back-to-top.active {
   visibility: visible;
   opacity: 1;

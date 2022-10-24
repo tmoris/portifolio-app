@@ -19,10 +19,14 @@
  * 3. Leave some space on the edges, especially valuable on small screens
  */
 .container {
- max-width: var.$max-width; /* 1 */
-  margin-inline: auto; /* 2 */
-  padding-inline: 1.25em; /* 3 */
-  width: 90%; /* 1 */
+  max-width: var.$max-width;
+  /* 1 */
+  margin-inline: auto;
+  /* 2 */
+  padding-inline: 1.25em;
+  /* 3 */
+  width: 90%;
+  /* 1 */
 }
 
 /**
@@ -32,7 +36,8 @@
  */
 .hide-text {
   overflow: hidden;
-  padding: 0; /* 1 */
+  padding: 0;
+  /* 1 */
   text-indent: 101%;
   white-space: nowrap;
 }
@@ -42,7 +47,8 @@
  * Shamelessly borrowed from HTML5Boilerplate:
  * https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css#L119-L133
  */
-.visually-hidden, .sr-only {
+.visually-hidden,
+.sr-only {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -52,16 +58,20 @@
   position: absolute;
   width: 1px;
 }
+
 .grid-centered {
   display: grid;
   place-content: center;
 }
+
 .jc-c {
   justify-content: center;
 }
+
 .jc-sb {
   justify-content: space-between;
 }
+
 .jc-sa {
   justify-content: space-around;
 }
@@ -69,6 +79,7 @@
 .ai-c {
   align-items: center;
 }
+
 .flex-dc {
   flex-direction: column;
 }

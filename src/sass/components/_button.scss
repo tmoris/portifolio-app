@@ -3,7 +3,8 @@
 // --------------------------------------------------------
 
 @use "../abstracts/variables" as var;
-@mixin btn($bg-color:#e2e2e2) {
+
+@mixin btn($bg-color: #e2e2e2) {
   text-decoration: none;
   cursor: pointer;
   padding: calc(var.$base-padding - 0.25rem) calc(var.$base-padding*2);
@@ -11,30 +12,35 @@
   background-color: $bg-color;
   transition: 250ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-@each $key, $val in var.$colors {
+
+@each $key,
+$val in var.$colors {
   .btn-#{$key} {
     border: 0;
     @include btn($val);
     color: var.$white;
+
     // adding hover effects 
     &:hover {
       background-color: lighten($val, 30%);
     }
   }
-  // outline button utility generator 
-  .btn-outlined-#{$key}{
-    display: inline-block;
-  border: var.$base-border-sm*1.5 solid $val;
-  transition:  200ms cubic-bezier(0.5, 0, 0.5, 1);
-  @include btn( map-get(var.$colors , white));
-  color: $val;
-  &:hover {
-    background-color: transparentize($color: $val, $amount: 0.85) ;
-    color: $val;
-    border-radius: 100vw;
-    border-block-end: 0.125em solid var.$white;
-  transform: scale(1.1);
 
+  // outline button utility generator 
+  .btn-outlined-#{$key} {
+    display: inline-block;
+    border: var.$base-border-sm*1.5 solid $val;
+    transition: 200ms cubic-bezier(0.5, 0, 0.5, 1);
+    @include btn(map-get(var.$colors , white));
+    color: $val;
+
+    &:hover {
+      background-color: transparentize($color: $val, $amount: 0.85);
+      color: $val;
+      border-radius: 100vw;
+      border-block-end: 0.125em solid var.$white;
+      transform: scale(1.1);
+
+    }
   }
-}
 }
