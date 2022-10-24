@@ -7,33 +7,35 @@
 
 @use "../abstracts/variables" as var;
 @use "../abstracts/mixins" as mixin;
+
 .header {
-inline-size: 100%;
-block-size: 100vh;
-background-color: var.$secondary;
-&-logolink {
-text-decoration: none;
-max-inline-size: 6.25rem;
-padding-block: var.$gutter;
+  inline-size: 100%;
+  block-size: 100vh;
+  background-color: var.$secondary;
 
-& .logo-img {
-  min-inline-size: 3rem;
- inline-size: clamp(3rem, 4rem, 100%);
-}
+  &-logolink {
+    text-decoration: none;
+    max-inline-size: 6.25rem;
+    padding-block: var.$gutter;
+
+    & .logo-img {
+      min-inline-size: 3rem;
+      inline-size: clamp(3rem, 4rem, 100%);
+    }
+  }
 }
 
-}
 #header .header-scrolled {
   box-shadow: var.$base-box-shadow;
   padding-block: var.$base-padding;
 }
- .brand-nav {
+
+.brand-nav {
   flex: 1 auto;
   position: relative;
-  
-  }
+}
 
-  /*----------------------------------------
+/*----------------------------------------
 **Hero Section**
 ------------------------------------------*/
 .hero {
@@ -44,8 +46,8 @@ padding-block: var.$gutter;
 
   &-content {
     text-align: center;
-   position: relative;
-   block-size: 100vh;
+    position: relative;
+    block-size: 100vh;
   }
 
   &-overlay {
@@ -58,80 +60,96 @@ padding-block: var.$gutter;
     width: 100%;
     opacity: 0.9;
   }
-  &__media-links {
+
+  &__media {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    position: absolute;
     gap: 1em;
-    bottom: 1em;
-    right: 1em;
-    z-index: 1000;
-    transition: 150ms cubic-bezier(0.5, 0, 0.5, 1);
-    visibility: hidden;
-    color: var.$accent; 
-    @include mixin.m-screen {
-      visibility: visible;
-    }
-  }
-  &__media-links::before, &__media-links::after {
-    content: "";
-    inline-size: 20vh;
-    block-size:0.125em  ;
-    background-color: transparentize($color: var.$white, $amount: 0.8);
-    margin: 0 auto;
-    @include mixin.m-screen {
-      visibility: visible;
-    }
-  }
-  &__mail {
+    inline-size: 95%;
     position: absolute;
     bottom: 1em;
     left: 1em;
+    right: 1em;
+
+    &-links {
+      display: flex;
+      flex-flow: row wrap;
+      gap: 1em;
+      transition: 150ms cubic-bezier(0.5, 0, 0.5, 1);
+      visibility: hidden;
+      color: var.$accent;
+
+      &::before,
+      &::after {
+        content: "";
+        inline-size: 10vw;
+        block-size: 0.125em;
+        background-color: transparentize($color: var.$white, $amount: 0.8);
+        margin-block-start: 1em;
+
+        @include mixin.m-screen {
+          visibility: visible;
+        }
+      }
+
+      @include mixin.m-screen {
+        visibility: visible;
+      }
+    }
+  }
+
+  &__mail {
     color: var.$accent;
     font-size: 1.25rem;
-    z-index: 999;
-   visibility: hidden;
+    visibility: hidden;
+
     @include mixin.m-screen {
       visibility: visible;
     }
-
   }
+
   &__media-links a:hover {
     opacity: 0.65;
     transform: scale(1.2);
   }
+
   &-text {
     color: #f5f5f5;
     line-height: 1.1;
     margin-inline: auto;
     font-size: 1.125rem;
   }
+
   &-title {
     color: #fff;
     font-weight: 600;
     font-size: 2.5rem;
- 
   }
+
   &-subtitle {
     font-size: 1.5rem;
     font-weight: 600;
     color: transparentize($color: var.$white, $amount: 0.5);
   }
 }
+
 .bg-image {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   background-position: center center;
 }
+
 .text-accetent {
   color: var.$accent;
 }
+
 .table-cell {
   display: table-cell;
   vertical-align: middle;
 }
+
 .display-table {
   inline-size: 100%;
   block-size: 100%;
@@ -139,15 +157,17 @@ padding-block: var.$gutter;
 }
 
 @include mixin.s-screen {
-  .hero{
+  .hero {
     &-text {
       font-size: 1.25rem;
     }
+
     &-title {
-      font-size:  var.$font-xxl*1.5;
+      font-size: var.$font-xxl * 1.5;
     }
+
     &-subtitle {
-    font-size: 2.5rem;
+      font-size: 2.5rem;
     }
   }
 }
