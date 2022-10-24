@@ -16,6 +16,11 @@
      color: var.$secondary;
  
     }
+    @include mixin.dark-theme {
+      background-color: var.$secondary;
+     color: var.$white;
+ 
+    }
  }
  
  

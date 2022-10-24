@@ -81,3 +81,8 @@
  @content;
    }
 }
+@mixin  dark-theme {
+  @media screen and (prefers-color-scheme: dark) {
+ @content;
+   }
+}

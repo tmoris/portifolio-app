@@ -1,4 +1,5 @@
 @use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mixin;
 @use "sass:math" as math;
 .card {
   display: block;
@@ -9,6 +10,11 @@
   position: relative;
   overflow: hidden;
   margin: var.$base-margin;
+  @include mixin.dark-theme {
+    background-color: lighten(var.$secondary, 3%);
+     color: var.$white;
+
+  }
   &::before {
     content: '';
     background-color: transparentize($color: var.$accent, $amount: 0.98);
