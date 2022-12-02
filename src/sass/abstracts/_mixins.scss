@@ -14,7 +14,7 @@
 
 @mixin links-animator {
   @for $i from 1 through 4 {
-    .navlist-item:nth-child(#{$i}) {
+    .navlist-item__link :nth-child(#{$i}) {
       transition-delay: ($i * 0.1s) + 0.15s;
     }
   }
