@@ -34,6 +34,7 @@
     &>* {
       flex: 1;
     }
+
   }
 
   &__title {
@@ -126,6 +127,18 @@
     flex-direction: column;
     justify-content: center;
     clear: both;
+  }
+
+  &__contacts {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 5%;
+  }
+
+  & .txt-black {
+    color: black;
+
   }
 }
 
