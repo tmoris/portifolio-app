@@ -1,5 +1,6 @@
 <?php
-if(empty($_POST['name']) || empty($_POST['subject']) || empty($_POST['message']) || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+if(empty($_POST['name']) || empty($_POST['subject']) || empty($_POST['message']) || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) 
+{
   http_response_code(500);
   exit();
 }
@@ -14,10 +15,14 @@ $to = "tibenkanamoris@gmail.com";
 $subject = "$m_subject:  $name";
 $body = "You have received a new message from your website contact form.\n\n"."Here are the details:\n\nName: $name\n\n\nEmail: $email\n\nSubject: $m_subject\n\nMessage: $message";
 $header = "From: $email";
-$header = "Reply-To: $email";	
+$header = "Reply-To: $email";
+mail($to, $subject, $body, $header);
+echo " Your message has been sent!";
 
 if(!mail($to, $subject, $body, $header))
-  http_response_code(500);
-else 
-echo " Your message has been sent!";
+{
+    http_response_code(500);
+    header("index.html");
+}
+ 
 }
