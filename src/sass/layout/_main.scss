@@ -180,7 +180,7 @@
   z-index: 2;
 
   @include mixin.dark-theme {
-    background-color: lighten(var.$secondary, 3%);
+    // background-color: lighten(var.$secondary, 3%);
     color: var.$white;
   }
 
