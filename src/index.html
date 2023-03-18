@@ -19,11 +19,10 @@
   <link rel="stylesheet" href="./css/style.css">
 
   <!-- EmailJS  cdn -->
-  <script 
-  src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js">
+  <script src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js">
   </script>
   <script type="text/javascript">
-    (function() {
+    (function () {
       emailjs.init("U9h2cQeseMkxog38Q");
     })();
   </script>
@@ -311,7 +310,12 @@
               Message Me
             </h3>
             <div class="container">
-              <form action="https://api.emailjs.com/api/v1.0/email/send" method="POST" class="form" name="contact-form" id="contact-form">
+              <form action="https://api.emailjs.com/api/v1.0/email/send" method="POST" class="form" name="contact-form"
+                id="contact-form">
+                
+                <input type="hidden" name="service_id" value="service_vemdias">
+                <input type="hidden" name="template_id" value="template_k52u69b">
+                <input type="hidden" name="user_id" value="U9h2cQeseMkxog38Q">
                 <div class="form-group">
                   <label for="name" class="form-label">name</label>
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
@@ -339,7 +343,7 @@
                 <div class="success-message ">Your message has been sent. Thank you!</div>
 
                 <div class="col-md-12 mb-3">
-                  <button type="submit" name="submit" class="form-button formSubmit">Send Message</button>
+                  <button type="submit" name="submit" class="form-button form_submit">Send Message</button>
                 </div>
               </form>
             </div>
@@ -358,16 +362,15 @@
     <a href="#" class="back-to-top display-f align-items-center justify-content-center active"><img
         src="./assets/imgs/arrow_upward.svg" alt="arrow_upward"><span class="sr-only">back-to-top button</span></a>
     <div class="container">
-      &copy;Copyright @tmoris 2022.
+      &copy;Copyright @tmoris 2023.
     </div>
   </footer>
   <!-- footer end -->
   <script src="./assets/js/main.js"></script>
   <!-- email.js -->
-<script src="./assets/js/mail/email.js"></script>
+  <script src="./assets/js/mail/email.js"></script>
   <!-- type script -->
   <script src="./assets/js/typed.js/typed.min.js"></script>
- 
 
 </body>
 
