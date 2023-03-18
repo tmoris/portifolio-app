@@ -1,5 +1,6 @@
 (function() {
   "use strict";
+  emailjs.init("apC8oim40cdzUguZ4");
 
   /**
    * Easy selector helper function
@@ -194,3 +195,34 @@
        alert(errorMessage);
      }
    }, false);
+
+
+   form.addEventListener("submit", function (event) {
+     // Prevent the form from submitting normally
+     event.preventDefault();
+
+     // Get the form data
+     const formData = {
+       name: form.elements.name.value,
+       email: form.elements.email.value,
+       subject: form.elements.subject.value,
+       message: form.elements.message.value,
+     };
+
+     // Send the email using EmailJS
+     emailjs.send("service_vemdias", "template_mtvjvc9y", formData).then(
+       function (response) {
+         console.log("SUCCESS!", response.status, response.text);
+         // Display a success message to the user
+         successMessage.style.display = "block";
+         errorMessage.style.display = "none";
+         form.reset();
+       },
+       function (error) {
+         console.error("FAILED...", error);
+         // Display an error message to the user
+         successMessage.style.display = "none";
+         errorMessage.style.display = "block";
+       }
+     );
+   })();
