@@ -17,6 +17,13 @@
   <script src="https://kit.fontawesome.com/80210fbce6.js" crossorigin="anonymous"></script>
   <!-- Main styles(css) link -->
   <link rel="stylesheet" href="./css/style.css">
+
+  <script src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+  <script type="text/javascript">
+    (function() {
+      emailjs.init("apC8oim40cdzUguZ4");
+    })();
+  </script>
 </head>
 
 <body>
@@ -301,7 +308,7 @@
               Message Me
             </h3>
             <div class="container">
-              <form method="post" class="form" name="contact-form" id="contact-form">
+              <form method="sendForm()" class="form" name="contact-form" id="contact-form">
                 <div class="form-group">
                   <label for="name" class="form-label">name</label>
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
@@ -357,7 +364,8 @@
   <script src="./assets/js/typed.js/typed.min.js"></script>
    <!-- EmailJS  cdn -->
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
-
+<!-- email.js -->
+<script src="./assets/mail/email.js"></script>
 </body>
 
 </html>
