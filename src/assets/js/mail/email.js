@@ -1,3 +1,9 @@
+const form = document.getElementById("contact-form");
+
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
+  sendForm();
+});
 
 function sendForm() {
   // Collect form data
@@ -7,7 +13,7 @@ function sendForm() {
 
   // Send the email
   emailjs
-    .send("service_vemdias", "template_mtvjc9y", {
+    .send("service_vemdias", "template_k52u69b", {
       from_name: name,
       from_email: email,
       message: message,
@@ -22,10 +28,3 @@ function sendForm() {
     );
 }
 emailjs.init("U9h2cQeseMkxog38Q");
-
-const form = document.getElementById("contact-form");
-
-form.addEventListener("submit", function (event) {
-  event.preventDefault();
-  sendForm();
-});
