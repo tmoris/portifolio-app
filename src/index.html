@@ -18,10 +18,12 @@
   <!-- Main styles(css) link -->
   <link rel="stylesheet" href="./css/style.css">
 
-  <script src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+  <script 
+  src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js">
+  </script>
   <script type="text/javascript">
     (function() {
-      emailjs.init("apC8oim40cdzUguZ4");
+      emailjs.init("U9h2cQeseMkxog38Q");
     })();
   </script>
 </head>
@@ -308,7 +310,7 @@
               Message Me
             </h3>
             <div class="container">
-              <form method="sendForm()" class="form" name="contact-form" id="contact-form">
+              <form action="https://api.emailjs.com/api/v1.0/email/send" method="POST" class="form" name="contact-form" id="contact-form">
                 <div class="form-group">
                   <label for="name" class="form-label">name</label>
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>

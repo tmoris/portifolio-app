@@ -1,3 +1,4 @@
+
 function sendForm() {
   // Collect form data
   const name = document.getElementById("name").value;
@@ -20,6 +21,7 @@ function sendForm() {
       }
     );
 }
+emailjs.init("U9h2cQeseMkxog38Q");
 
 const form = document.getElementById("contact-form");
 
