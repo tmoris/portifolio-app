@@ -153,6 +153,20 @@
   gap: 5%;
   z-index: 191;
 }
+// Projects styles end
+
+// Blog sytles
+.blog {
+ padding-block: var.$gutter;
+&-item {
+  border-left: 0.175em solid var.$accent;
+  border-radius: 0.7em;
+& + & {
+  margin-block-start: 0.5em;
+}
+}
+  
+}
 
 // contact section styles
 .contact-section {
