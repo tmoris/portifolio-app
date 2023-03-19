@@ -1,4 +1,4 @@
-(function() {
+(function () {
   "use strict";
 
   /**
@@ -107,20 +107,20 @@
   /**
    * Mobile nav toggle
    */
-   const navToggle = document.querySelector('.nav-menuToggle');
-   const links = document.querySelectorAll('.navlist-item__link');
-   
-   navToggle.addEventListener('click', () => {
-   document.body.classList.toggle('open');
-   });
-   
-   links.forEach(link => {
-     link.addEventListener('click', () => {
-   document.body.classList.remove('open');
-     });
-   });
+  const navToggle = document.querySelector('.nav-menuToggle');
+  const links = document.querySelectorAll('.navlist-item__link');
 
-  
+  navToggle.addEventListener('click', () => {
+    document.body.classList.toggle('open');
+  });
+
+  links.forEach(link => {
+    link.addEventListener('click', () => {
+      document.body.classList.remove('open');
+    });
+  });
+
+
   /**
    * Scroll with ofset on page load with hash links in the url
    */
@@ -147,7 +147,7 @@
       backDelay: 2000
     });
   }
-  
+
   /**
    * Preloader
    */
@@ -160,67 +160,65 @@
 })()
 /* form validation  */
 
-   const constraints = {
-     name: {
-       presence: {
-         allowEmpty: false,
-         message: "^Please enter your name",
-       },
-       length: {
-         minimum: 3,
-         message: "^Name must be at least 3 characters",
-       },
-     },
-     email: {
-       presence: {
-         allowEmpty: false,
-         message: "^Please enter your email",
-       },
-       email: {
-         message: "^Please enter a valid email address",
-       },
-     },
-     subject: {
-       presence: {
-         allowEmpty: false,
-         message: "^Please enter a subject",
-       },
-       length: {
-         minimum: 3,
-         message: "^Subject must be at least 3 characters",
-       },
-     },
-     message: {
-       presence: {
-         allowEmpty: false,
-         message: "^Please enter a message",
-       },
-       length: {
-         minimum: 10,
-         message: "^Message must be at least 10 characters",
-       },
-     },
-   };
+const constraints = {
+  name: {
+    presence: {
+      allowEmpty: false,
+      message: "^Please enter your name",
+    },
+    length: {
+      minimum: 3,
+      message: "^Name must be at least 3 characters",
+    },
+  },
+  email: {
+    presence: {
+      allowEmpty: false,
+      message: "^Please enter your email",
+    },
+    email: {
+      message: "^Please enter a valid email address",
+    },
+  },
+  subject: {
+    presence: {
+      allowEmpty: false,
+      message: "^Please enter a subject",
+    },
+    length: {
+      minimum: 3,
+      message: "^Subject must be at least 3 characters",
+    },
+  },
+  message: {
+    presence: {
+      allowEmpty: false,
+      message: "^Please enter a message",
+    },
+    length: {
+      minimum: 10,
+      message: "^Message must be at least 10 characters",
+    },
+  },
+};
 
+const form = document.getElementById('contact-form');
+form.addEventListener('submit', function (event) {
+  const formValues = {
+    name: form.elements.name.value,
+    email: form.elements.email.value,
+    message: form.elements.message.value
+  };
 
-   const form = document.getElementById('contact-form');
+  const errors = validate(formValues, constraints);
 
-   form.addEventListener('submit', function (event) {
-     const formValues = {
-         name: form.elements.name.value,
-         email: form.elements.email.value,
-         message: form.elements.message.value
-     };
+  if (errors) {
+    event.preventDefault();
+    const errorMessage = Object
+      .values(errors)
+      .map(function (fieldValues) { return fieldValues.join(', ') })
+      .join("\n");
 
-     const errors = validate(formValues, constraints);
-
-     if (errors) {
-       event.preventDefault();
-       const errorMessage = Object
-           .values(errors)
-           .map(function (fieldValues) { return fieldValues.join(', ')})
-           .join("\n");
-
-       alert(errorMessage);
-     }
-   }, false);
+    alert(errorMessage);
+  }
+}, false);
