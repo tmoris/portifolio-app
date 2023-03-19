@@ -161,17 +161,47 @@
 /* form validation  */
 
    const constraints = {
-       name: {
-           presence: { allowEmpty: false }
+     name: {
+       presence: {
+         allowEmpty: false,
+         message: "^Please enter your name",
+       },
+       length: {
+         minimum: 3,
+         message: "^Name must be at least 3 characters",
+       },
+     },
+     email: {
+       presence: {
+         allowEmpty: false,
+         message: "^Please enter your email",
        },
        email: {
-           presence: { allowEmpty: false },
-           email: true
+         message: "^Please enter a valid email address",
        },
-       message: {
-           presence: { allowEmpty: false }
-       }
+     },
+     subject: {
+       presence: {
+         allowEmpty: false,
+         message: "^Please enter a subject",
+       },
+       length: {
+         minimum: 3,
+         message: "^Subject must be at least 3 characters",
+       },
+     },
+     message: {
+       presence: {
+         allowEmpty: false,
+         message: "^Please enter a message",
+       },
+       length: {
+         minimum: 10,
+         message: "^Message must be at least 10 characters",
+       },
+     },
    };
+
 
    const form = document.getElementById('contact-form');
 
