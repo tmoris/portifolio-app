@@ -13,6 +13,8 @@
   <link href="./assets/imgs/logo.svg" rel="icon">
   <!-- typed js cdn link -->
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+
 
   <!-- google fonts -->
   <!-- fontawesome icon link  -->
@@ -20,15 +22,15 @@
   <!-- Main styles(css) link -->
   <link rel="stylesheet" href="./css/style.css">
 
-  <!-- EmailJS  cdn -->
+  <!-- EmailJS  cdn
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <script type="text/javascript">
     (function () {
       emailjs.init("U9h2cQeseMkxog38Q");
     })();
   </script>
-  <!-- email.js -->
-  <script src="./assets/js/mail/email.js"></script>
+   email.js -->
+  <!-- <script src="./assets/js/mail/email.js"></script> --> 
 
 </head>
 
@@ -378,7 +380,7 @@
               Message Me
             </h3>
             <div class="container">
-              <form action="https://api.emailjs.com/api/v1.0/email/send" method="POST" class="form" name="contact-form"
+              <form action="./assets/mail/contacts.php" method="POST" class="form" name="contact-form"
                 id="contact-form">
                 <input type="hidden" name="contact_number">
                 <div class="form-group">
