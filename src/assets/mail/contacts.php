@@ -4,7 +4,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
     $message = $_POST["message"];
 
-    $to = "your_email@example.com";
+    $to = "tibenkanamoris@gmail.com";
     $subject = "New message from your portfolio page";
     $headers = "From: " . $email . "\r\n" .
                "Reply-To: " . $email . "\r\n" .
