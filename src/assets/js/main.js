@@ -119,6 +119,12 @@
       document.body.classList.remove('open');
     });
   });
+  // animation
+  links.forEach((link, index) => {
+    const delay = index * 200;
+    link.style.animationDelay = `${delay}ms`;
+    link.classList.add("fade-in-top");
+  });
 
 
   /**
