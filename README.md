@@ -28,8 +28,8 @@ Welcome to the repository for my personal portfolio website. This site showcases
 
 ## Installation and Usage
 
-1. Clone this repository: `git clone [repository URL]`.
-2. Navigate to the project directory in the terminal: `cd [tibenkana-moris-portifolio-app`.
+1. Clone this repository: `git clone https://github.com/tmoris/tibenkana-moris-portifolio-app`.
+2. Navigate to the project directory in the terminal: `cd tibenkana-moris-portifolio-app`.
 3. If you're using Node.js and have a `server.js` file, run `node server.js` to start the server.
 4. Open your web browser and visit `http://localhost:3000` (or whatever your server port is).
 
