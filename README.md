@@ -1,4 +1,4 @@
-# [Tibenkana Moris ]'s Portfolio
+# Tibenkana Moris's Portfolio
 
 Welcome to the repository for my personal portfolio website. This site showcases my development projects and skills, in addition to providing information about me, my career journey, and how to get in touch.
 
@@ -53,8 +53,8 @@ Each project includes a description, the technologies used, and links to both th
 I welcome feedback, opportunities, collaborations, or friendly chats. You can reach me at:
 
 - Email: [tibenkanamoris@gmail.com](mailto:tibenkanamoris@gmail.com)
-- LinkedIn: [Your LinkedIn Profile](#)
-- GitHub: [https://www.linkedin.com/in/moris-tibenkana-34116b182/](#)
+- GitHub: [https://github.com/tmoris](https://github.com/tmoris)
+- LinkedIn: [https://www.linkedin.com/in/moris-tibenkana-34116b182/](https://www.linkedin.com/in/moris-tibenkana-34116b182/)
 
 ## Contributing
 
