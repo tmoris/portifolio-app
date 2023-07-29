@@ -109,6 +109,8 @@
    */
   const navToggle = document.querySelector('.nav-menuToggle');
   const links = document.querySelectorAll('.navlist-item__link');
+  const animator = document.querySelectorAll(".animator-child");
+  const threshold = 200;
 
   navToggle.addEventListener('click', () => {
     document.body.classList.toggle('open');
@@ -117,13 +119,59 @@
   links.forEach(link => {
     link.addEventListener('click', () => {
       document.body.classList.remove('open');
+      link.addEventListener('click',);
     });
   });
-  // animation
-  links.forEach((link, index) => {
-    const delay = index * 200;
-    link.style.animationDelay = `${delay}ms`;
-    link.classList.add("fade-in-top");
+
+  //  Animation
+  const animateElements = (elements) => {
+    elements.forEach((element, index) => {
+      const delay = index * 200;
+      element.style.animationDelay = `${delay}ms`;
+      element.classList.add("fade-in-top");
+    });
+  };
+
+  animateElements(links);
+  animateElements(animator);
+
+
+
+  function checkScroll() {
+    animator.forEach((element) => {
+      const elementTop = element.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+
+      // Calculate the distance between the element and the scroll position
+      const distance = elementTop - windowHeight + threshold;
+
+      if (distance < 0) {
+        element.classList.add("fade-in-top");
+      }
+    });
+  }
+
+
+  function scrollToSection(event) {
+    event.preventDefault();
+
+    const target = event.target.getAttribute('href');
+    const section = document.querySelector(target);
+
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
+  // Attach the scroll event listener
+  window.addEventListener('scroll', checkScroll);
+
+
+  // Call the checkScroll function initially to check the elements in view
+  checkScroll();
+
+  links.forEach((link) => {
+    link.addEventListener("click", scrollToSection);
   });
 
 
@@ -163,70 +211,83 @@
       preloader.remove()
     });
   }
-})()
-/* form validation  */
+  /**
+   * Footer year update 
+   */
+  //  Get the current year
+  const currentYear = new Date().getFullYear();
 
-const constraints = {
-  name: {
-    presence: {
-      allowEmpty: false,
-      message: "^Please enter your name",
-    },
-    length: {
-      minimum: 3,
-      message: "^Name must be at least 3 characters",
-    },
-  },
-  email: {
-    presence: {
-      allowEmpty: false,
-      message: "^Please enter your email",
+  // Update the content of the currentYear element
+  const currentYearElement = document.getElementById("currentYear")
+  if (currentYearElement) {
+    currentYearElement.textContent = currentYear;
+  }
+
+  /**
+   * Form Validation
+   */
+  const constraints = {
+    name: {
+      presence: {
+        allowEmpty: false,
+        message: "^Please enter your name",
+      },
+      length: {
+        minimum: 3,
+        message: "^Name must be at least 3 characters",
+      },
     },
     email: {
-      message: "^Please enter a valid email address",
+      presence: {
+        allowEmpty: false,
+        message: "^Please enter your email",
+      },
+      email: {
+        message: "^Please enter a valid email address",
+      },
     },
-  },
-  subject: {
-    presence: {
-      allowEmpty: false,
-      message: "^Please enter a subject",
+    subject: {
+      presence: {
+        allowEmpty: false,
+        message: "^Please enter a subject",
+      },
+      length: {
+        minimum: 3,
+        message: "^Subject must be at least 3 characters",
+      },
     },
-    length: {
-      minimum: 3,
-      message: "^Subject must be at least 3 characters",
+    message: {
+      presence: {
+        allowEmpty: false,
+        message: "^Please enter a message",
+      },
+      length: {
+        minimum: 10,
+        message: "^Message must be at least 10 characters",
+      },
     },
-  },
-  message: {
-    presence: {
-      allowEmpty: false,
-      message: "^Please enter a message",
-    },
-    length: {
-      minimum: 10,
-      message: "^Message must be at least 10 characters",
-    },
-  },
-};
+  };
 
-const form = document.getElementById('contact-form');
-form.addEventListener('submit', function (event) {
- const formValues = {
-   name: form.elements.name.value,
-   email: form.elements.email.value,
-   subject: form.elements.subject.value,
-   message: form.elements.message.value,
- };
+  const form = document.getElementById('contact-form');
+  form.addEventListener('submit', function (event) {
+    const formValues = {
+      name: form.elements.name.value,
+      email: form.elements.email.value,
+      subject: form.elements.subject.value,
+      message: form.elements.message.value,
+    };
 
+    const errors = validate(formValues, constraints);
 
-  const errors = validate(formValues, constraints);
+    if (errors) {
+      event.preventDefault();
+      const errorMessage = Object
+        .values(errors)
+        .map(function (fieldValues) { return fieldValues.join(', ') })
+        .join("\n");
 
-  if (errors) {
-    event.preventDefault();
-    const errorMessage = Object
-      .values(errors)
-      .map(function (fieldValues) { return fieldValues.join(', ') })
-      .join("\n");
+      alert(errorMessage);
+    }
+  }, false);
 
-    alert(errorMessage);
-  }
-}, false);
+})();
