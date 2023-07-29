@@ -3,6 +3,7 @@
 @use "sass:math" as math;
 
 .card {
+  max-inline-size: 30em;
   display: block;
   background-color: var.$white;
   color: inherit;
