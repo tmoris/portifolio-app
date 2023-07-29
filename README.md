@@ -52,10 +52,10 @@ Each project includes a description, the technologies used, and links to both th
 
 I welcome feedback, opportunities, collaborations, or friendly chats. You can reach me at:
 
-- Email: [tibenkanamoris@gmail.com](mailto:tibenkanamoris@gmail.com)
-- [![GitHub](https://raw.githubusercontent.com/tmoris/tibenkana-moris-portifolio-app/main/assets/imgs/github.svg)](https://github.com/tmoris)
+- [![Email]](mailto:tibenkanamoris@gmail.com)
+- [![GitHub]](https://github.com/tmoris)
 
-- LinkedIn: [https://www.linkedin.com/in/moris-tibenkana-34116b182/](https://www.linkedin.com/in/moris-tibenkana-34116b182/)
+- [![LinkedIn]](https://www.linkedin.com/in/moris-tibenkana-34116b182/)
 
 ## Contributing
 
