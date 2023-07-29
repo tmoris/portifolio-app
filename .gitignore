@@ -1,3 +1,4 @@
+# .gitignore
 node_modules/
 public/
 src/assets/imgs/hero-bg.jpg
@@ -8,3 +9,8 @@ src/assets/imgs/pexels-tranmautritam-326503.jpg
 src/assets/imgs/pexels-ylanite-koppens-843266.jpg
 *.env/
 *.map
+npm-debug.log
+.DS_Store
+dist/
+/.env
+
