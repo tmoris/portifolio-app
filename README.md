@@ -18,7 +18,7 @@ Welcome to the repository for my personal portfolio website. This site showcases
 - HTML
 - CSS
 - JavaScript
-- [SCSS, node]
+- SCSS
 
 ## Project Structure
 
@@ -53,7 +53,7 @@ Each project includes a description, the technologies used, and links to both th
 I welcome feedback, opportunities, collaborations, or friendly chats. You can reach me at:
 
 - Email: [tibenkanamoris@gmail.com](mailto:tibenkanamoris@gmail.com)
-- GitHub: [https://github.com/tmoris](https://github.com/tmoris)
+- [![GitHub](./assets/imgs/github.svg)](https://github.com/tmoris)
 - LinkedIn: [https://www.linkedin.com/in/moris-tibenkana-34116b182/](https://www.linkedin.com/in/moris-tibenkana-34116b182/)
 
 ## Contributing
