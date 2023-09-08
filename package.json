@@ -26,12 +26,7 @@
     "cssnano": "^5.0.17",
     "dotenv": "^16.3.1",
     "emailjs-com": "^3.2.0",
-<<<<<<< HEAD
-    "git-filter-repo": "^0.0.30",
-    "gulp": "^3.9.1",
-=======
     "gulp": "^4.0.2",
->>>>>>> 5ad9a6f242b35a72c4798ca8fbce7dcf791d154a
     "gulp-sass": "^5.1.0",
     "onchange": "^7.1.0",
     "postcss-cli": "^9.1.0",

@@ -221,12 +221,6 @@ position: relative;
   background-color: var.$accent;
   padding-block-end: var.$base-padding * 3;
   position: relative;
-<<<<<<< HEAD
-
-  
-
-=======
->>>>>>> 5ad9a6f242b35a72c4798ca8fbce7dcf791d154a
 }
 
 .contact-title {
@@ -247,7 +241,7 @@ position: relative;
   position: relative;
   z-index: 2;
 
-<<<<<<< HEAD
+
  @include mixin.light-theme {
     background-color: var.$white;
     color: var.$secondary;
@@ -257,12 +251,6 @@ position: relative;
   @include mixin.dark-theme {
     background-color: var.$secondary;
     color: var.$white;
-
-=======
-  @include mixin.dark-theme {
-    // background-color: lighten(var.$secondary, 3%);
-    color: var.$white;
->>>>>>> 5ad9a6f242b35a72c4798ca8fbce7dcf791d154a
   }
 
   @include mixin.l-screen {

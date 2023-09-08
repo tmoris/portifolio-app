@@ -14,12 +14,10 @@ npm-debug.log
 dist/
 /.env
 
-<<<<<<< HEAD
 src/assets/imgs/code1.jpg
 src/assets/imgs/code1.jpg
 src/assets/imgs/Screenshot 2022-10-20 at 12-04-50 Frontend Mentor Sunnyside agency landing page.png
 
 # Local Netlify folder
 .netlify
-=======
->>>>>>> 5ad9a6f242b35a72c4798ca8fbce7dcf791d154a
+
