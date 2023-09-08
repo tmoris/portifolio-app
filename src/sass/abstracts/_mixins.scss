@@ -1,0 +1,96 @@
+@use "../abstracts/variables" as var;
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+
+@mixin on-event {
+
+  &:hover,
+  &:active,
+  &:focus {
+    @content;
+  }
+}
+
+@mixin links-animator {
+  @for $i from 1 through 4 {
+    .navlist-item__link :nth-child(#{$i}) {
+      transition-delay: ($i * 0.1s) + 0.15s;
+    }
+  }
+}
+
+@mixin xs-screen {
+  @media (min-width: map-get(var.$breakpoints, 'xs')) {
+    @content;
+  }
+}
+
+@mixin s-screen {
+
+  @media (min-width: map-get(var.$breakpoints, 'sm')) {
+    @content;
+  }
+}
+
+@mixin m-screen {
+  @media (min-width: map-get(var.$breakpoints, 'md')) {
+    @content;
+  }
+}
+
+@mixin l-screen {
+  @media (min-width: map-get(var.$breakpoints, 'lg')) {
+    @content;
+  }
+}
+
+@mixin xl-screen {
+  @media (min-width: map-get(var.$breakpoints, 'xl')) {
+    @content;
+  }
+}
+
+// max width media-queries
+@mixin xs-screen-down {
+  @media (max-width: map-get(var.$breakpoints, 'xs')) {
+    @content;
+  }
+}
+
+@mixin s-screen-down {
+
+  @media (max-width: map-get(var.$breakpoints, 'sm')) {
+    @content;
+  }
+}
+
+@mixin m-screen-down {
+  @media (max-width: map-get(var.$breakpoints, 'md')) {
+    @content;
+  }
+}
+
+@mixin l-screen-down {
+  @media (max-width: map-get(var.$breakpoints, 'lg')) {
+    @content;
+  }
+}
+
+@mixin xl-screen-down {
+  @media (max-width: map-get(var.$breakpoints, 'xl')) {
+    @content;
+  }
+}
+
+@mixin light-theme {
+  @media screen and (prefers-color-scheme: light) {
+    @content;
+  }
+}
+
+@mixin dark-theme {
+  @media screen and (prefers-color-scheme: dark) {
+    @content;
+  }
+}

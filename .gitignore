@@ -1,0 +1,25 @@
+# .gitignore
+node_modules/
+public/
+src/assets/imgs/hero-bg.jpg
+src/assets/imgs/pexels-pixabay-265087.jpg
+src/assets/imgs/pexels-pixabay-265087.jpg
+src/assets/imgs/pexels-pixabay-459654.jpg
+src/assets/imgs/pexels-tranmautritam-326503.jpg
+src/assets/imgs/pexels-ylanite-koppens-843266.jpg
+*.env/
+*.map
+npm-debug.log
+.DS_Store
+dist/
+/.env
+
+<<<<<<< HEAD
+src/assets/imgs/code1.jpg
+src/assets/imgs/code1.jpg
+src/assets/imgs/Screenshot 2022-10-20 at 12-04-50 Frontend Mentor Sunnyside agency landing page.png
+
+# Local Netlify folder
+.netlify
+=======
+>>>>>>> 5ad9a6f242b35a72c4798ca8fbce7dcf791d154a

@@ -1,0 +1,27 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+.project-detail {
+	padding-inline-start: 1.25em;
+
+}
+.project-detail  video {
+	padding-inline-start: 1.25em;
+
+}
+.portfolio-details * p {
+max-width: 90%;
+}
+.portfolio-details ol {
+	list-style: decimal;
+}
+.portfolio-details ol > strong {
+	font-weight: 900;
+	text-decoration: underline;
+}
+ #project2-description, #project3-description {
+display: none;
+}
+#project2-details, #project3-details {
+display: none;
+}
