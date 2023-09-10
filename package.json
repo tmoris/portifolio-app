@@ -16,7 +16,8 @@
     "serve": "browser-sync start --server public --files public",
     "start": "npm-run-all copy --parallel watch serve",
     "build": "npm-run-all copy:html build:*",
-    "postbuild": "postcss public/css/*.css -u autoprefixer cssnano -r --no-map"
+    "postbuild": "postcss public/css/*.css -u autoprefixer cssnano -r --no-map",
+    "purgecss": "purgecss --config purgecss.config.js --output public/css/purged.css"
   },
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
@@ -34,6 +35,8 @@
     "typed.js": "^2.0.16"
   },
   "devDependencies": {
-    "npm-run-all": "^4.1.5"
+    "npm-run-all": "^4.1.5",
+    "purgecss": "^5.0.0"
   }
+ 
 }
