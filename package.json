@@ -17,7 +17,7 @@
     "start": "npm-run-all copy --parallel watch serve",
     "build": "npm-run-all copy:html build:*",
     "postbuild": "postcss public/css/*.css -u autoprefixer cssnano -r --no-map",
-    "purgecss": "purgecss --config purgecss.config.js --output public/css/purged.css"
+    "purgecss": "purgecss --config purgecss.config.js --output public/css/main.css"
   },
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
