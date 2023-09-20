@@ -13,16 +13,14 @@
     "watch:html": "onchange \"src/*.html\" -- npm run copy:html",
     "watch:sass": "sass  --no-source-map --watch src/sass:public/css",
     "watch": "npm-run-all --parallel watch:*",
-    "serve": "GITHUB-PAGES-SERVER start --server public --files public",
     "start": "npm-run-all copy --parallel watch serve",
-    "build": "npm-run-all copy:html build:*",
-    "postbuild": "postcss public/css/*.css -u autoprefixer cssnano -r --no-map",
-    "purgecss": "purgecss --config purgecss.config.js --output public/css/main.css"
+      "build": "npm-run-all build:sass copy:html copy:assets postbuild",
+      "postbuild": "postcss public/css/*.css -u autoprefixer cssnano -r --no-map",
+      "purgecss": "purgecss --config purgecss.config.js --output public/css/main.css" 
   },
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
     "autoprefixer": "^10.4.2",
-
     "copyfiles": "^2.4.1",
     "cssnano": "^5.0.17",
     "dotenv": "^16.3.1",
