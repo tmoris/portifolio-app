@@ -9,6 +9,7 @@
     "copy:html": "copyfiles -u 1 ./src/*.html public",
     "copy": "npm-run-all --parallel copy:*",
     "copy:assets": "copyfiles -u 1 ./src/assets/**/* public",
+    "copy:xml": "copyfiles -u 1 ./src/*.xml public",
     "watch:assets": "onchange \"/src/assets/**/*\" -- npm run copy:html",
     "watch:html": "onchange \"src/*.html\" -- npm run copy:html",
     "watch:sass": "sass  --no-source-map --watch src/sass:public/css",
